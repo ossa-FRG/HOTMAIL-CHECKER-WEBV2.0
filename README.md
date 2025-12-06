@@ -14,7 +14,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?logo=javascript&logoColor=white"
          alt="Javascript">
-  <img src="https://img.shields.io/badge/Language-HTML-orange.svg?logo=html5&logoColor=white"
+  <img src="https://img.shields.io/badge/Language-PHP-blue.svg?logo=php&logoColor=white"
          alt="HTML">
   <img src="https://img.shields.io/badge/Language-CSS-purple.svg?logo=css&logoColor=white"
          alt="css">
@@ -72,6 +72,7 @@ This is the result if the code is successfully deployed.
 
 > **NOTE**
 > Warning All the information provided here is intended solely for educational and testing purposes. I do not endorse any illegal activities or unfair usage of this program.
+
 
 
 
