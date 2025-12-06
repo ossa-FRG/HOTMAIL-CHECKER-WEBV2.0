@@ -326,7 +326,7 @@ function checkAccount(account, proxy) {
     const proxyType = proxyTypeInput.value;
     
     // Build API URL
-    let apiUrl = `https://api.darkxcode.site/checker/hotmail/api.php?list=${encodeURIComponent(account.original)}&apikey=${apikey}`;
+    let apiUrl = `https://api.darkxcode.site/checker/hotmail/V2/api.php?list=${encodeURIComponent(account.original)}&apikey=${apikey}`;
     
     if (proxy) {
         apiUrl += `&proxy=${encodeURIComponent(proxy)}`;
@@ -815,4 +815,5 @@ function displaySampleResults() {
    $ DESIGN  : https://t.me/danielsmt 
    $ SITE    : https://darkxcode.site/
    $ VERSION : 2.0
+
 */
