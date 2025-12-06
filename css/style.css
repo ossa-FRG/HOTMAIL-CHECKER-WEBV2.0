@@ -1,0 +1,611 @@
+/*
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 2.0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #0078d4;
+    --danger-color: #d13438;
+    --success-color: #107c10;
+    --warning-color: #ffb900;
+    --dark-bg: #0d1117;
+    --dark-card: #161b22;
+    --dark-border: #30363d;
+    --dark-text: #f0f6fc;
+    --light-bg: #f6f8fa;
+    --light-card: #ffffff;
+    --light-border: #d0d7de;
+    --light-text: #24292f;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+body.light-mode header {
+    border-bottom-color: var(--light-border);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-container img {
+    height: 50px;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary-color), #50e6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.theme-toggle {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text);
+    border-radius: 30px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+body.light-mode .theme-toggle {
+    background: var(--light-card);
+    border-color: var(--light-border);
+    color: var(--light-text);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: var(--dark-card);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid var(--dark-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+body.light-mode .card {
+    background-color: var(--light-card);
+    border-color: var(--light-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group {
+    position: relative;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-border);
+    border-radius: 6px;
+    color: var(--dark-text);
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+body.light-mode input, 
+body.light-mode select, 
+body.light-mode textarea {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: var(--light-border);
+    color: var(--light-text);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
+}
+
+.info-text {
+    font-size: 13px;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.info-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.info-text a:hover {
+    text-decoration: underline;
+}
+
+.file-upload {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border: 2px dashed var(--dark-border);
+    border-radius: 6px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+body.light-mode .file-upload {
+    border-color: var(--light-border);
+}
+
+.file-upload:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(0, 120, 212, 0.05);
+}
+
+.file-upload i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.file-upload input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+/*
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 2.0
+*/
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #106ebe;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 120, 212, 0.3);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6e7681;
+    color: white;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.status-box {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 120px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-border);
+}
+
+body.light-mode .status-box {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-color: var(--light-border);
+}
+
+.status-box .count {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+}
+
+.status-box.live .count {
+    color: var(--success-color);
+}
+
+.status-box.die .count {
+    color: var(--danger-color);
+}
+
+.status-box.retry .count {
+    color: var(--warning-color);
+}
+
+.status-box.error .count {
+    color: #6e7681;
+}
+
+.results-container {
+    margin-top: 30px;
+}
+
+.results-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--dark-border);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+body.light-mode .results-tabs {
+    border-bottom-color: var (--light-border);
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    color: var(--dark-text);
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s;
+}
+
+body.light-mode .tab-btn {
+    color: var(--light-text);
+}
+
+.tab-btn:hover {
+    color: var(--primary-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px 3px 0 0;
+}
+
+.results-content {
+    max-height: 500px;
+    overflow-y: auto;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--dark-border);
+}
+
+body.light-mode .results-content {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-color: var(--light-border);
+}
+
+.result-item {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #6e7681;
+    background-color: rgba(255, 255, 255, 0.03);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+body.light-mode .result-item {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.result-item.live {
+    border-left-color: var(--success-color);
+}
+
+.result-item.die {
+    border-left-color: var(--danger-color);
+}
+
+.result-item.retry {
+    border-left-color: var(--warning-color);
+}
+
+.result-item.error {
+    border-left-color: #6e7681;
+}
+
+.result-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.result-email {
+    font-weight: 600;
+    margin-bottom: 5px;
+    word-break: break-all;
+}
+
+.result-msg {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.result-actions {
+    display: flex;
+    gap: 8px;
+}
+/*
+   $ TEAM    : https://instagram.com/darkxcode_
+   $ AUTHOR  : https://t.me/zlaxtert 
+   $ CODE    : https://t.me/zexkings 
+   $ DESIGN  : https://t.me/danielsmt 
+   $ SITE    : https://darkxcode.site/
+   $ VERSION : 2.0
+*/
+.export-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--dark-border);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+body.light-mode .copyright {
+    border-top-color: var(--light-border);
+}
+
+.copyright a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+.progress-container {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+body.light-mode .progress-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification.success {
+    background-color: var(--success-color);
+}
+
+.notification.error {
+    background-color: var(--danger-color);
+}
+
+.notification.warning {
+    background-color: var(--warning-color);
+}
+
+.notification.info {
+    background-color: var(--primary-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        gap: 20px;
+    }
+    
+    .card {
+        padding: 20px 15px;
+    }
+    
+    .status-box {
+        min-width: 100px;
+        padding: 10px;
+    }
+    
+    .status-box .count {
+        font-size: 22px;
+    }
+    
+    .result-info {
+        min-width: 100%;
+    }
+}
+
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
